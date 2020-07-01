@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Home
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <style type="text/css">
+       </style>
+    </head>
+<body>
+      
+    <div id=add><input type="button" value="Next"/></div>
+    <div class="toAdd">    <label>1</label>    </div>
+    <div class="toAdd">    <label>2</label>    </div>
+    <div class="toAdd">    <label>3</label>    </div>
+    <div class="toAdd">    <label>4</label>    </div>
+    <div class="toAdd">    <label>5</label>    </div>
+<script>
+$('.toAdd').hide();
+ var i = 0;
+ $('#add input').click(function () {
+     i=(i >= 5)?0:i;
+      //or if(i >= 5){ i=0;}
+     $('.toAdd').eq(i).show().siblings().not(':first').hide();
+     i++;
+ });
+</script>
+</body>
+</html>
